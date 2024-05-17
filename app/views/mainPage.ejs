@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +19,58 @@
 <body>
 
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="titremodal">Ajoute une tache</p>
+            
+            
+            
+            <form class="forms" method="POST" action="/createtask">
+
+                    <input type="text" placeholder="Pseudo" name="pseudo"  required/>
+                    <label>
+                    <input type="password" placeholder="Mot de passe" name="password" required/>
+                     
+                    </label>
+
+                    <button type="submit" value="createtask" class="create" id="yes" > Creer une tache</button><br /> 
+                  
+              </form>
+
+</div>
+</div>
+
+
+
+
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav>
+
 
 <div class="mainshit">
 
 
 
-<p>pute!</p>
+<div>
+
+    <img
+    class="fit-picture"
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+    alt=""   height="100px" width="100px"/>
 
 
+</div>
+
+<br><br><br>
+<div class="row">
 
 
+    <div class="col"><p>100%</p></div>
+    <div class="col"> <button  onclick="openModal()"   >add it!</button>     </div>
+</div>
 
 
 
@@ -46,5 +90,23 @@
 
     
 </div>
+
+
+
+<script>
+
+
+function openModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+}
+
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+</script>
 </body>
 </html>
